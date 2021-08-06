@@ -1,0 +1,14 @@
+In file included from gencode.cpp:2:0:
+testlib.h: In function ‘void compareTokens(int, std::__cxx11::string, std::__cxx11::string, char)’:
+testlib.h:4457:99: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘std::vector<std::__cxx11::basic_string<char> >::size_type {aka long unsigned int}’ [-Wformat=]
+         quitf(_wa, "%sexpected: %d tokens, found %d tokens", dif.c_str(), toka.size(), tokb.size());
+                                                                           ~~~~~~~~~~~             ^
+testlib.h:4457:99: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘std::vector<std::__cxx11::basic_string<char> >::size_type {aka long unsigned int}’ [-Wformat=]
+gencode.cpp: In function ‘int main(int, char**)’:
+gencode.cpp:18:24: warning: ‘void registerGen(int, char**)’ is deprecated: Use registerGen(argc, argv, 0) or registerGen(argc, argv, 1). The third parameter stands for the random generator version. If you are trying to compile old generator use macro -DUSE_RND_AS_BEFORE_087 or registerGen(argc, argv, 0). Version 1 has been released on Spring, 2013. Use it to write new generators. [-Wdeprecated-declarations]
+  registerGen(argc, argv);
+                        ^
+In file included from gencode.cpp:2:0:
+testlib.h:3784:6: note: declared here
+ void registerGen(int argc, char* argv[])
+      ^~~~~~~~~~~

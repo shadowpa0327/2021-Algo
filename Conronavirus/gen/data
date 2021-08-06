@@ -1,0 +1,12 @@
+@subtask samples
+manual sample-1.in
+manual sample-2.in
+
+@subtask random
+gencode random 10 1
+gencode random 1000000 2
+gencode random 1000000 3
+gencode random 1000000 4
+gencode random 1000000 5
+gencode random 1000000 6
+

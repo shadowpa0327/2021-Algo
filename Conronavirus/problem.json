@@ -1,0 +1,9 @@
+{
+  "name": "covid-19",
+  "title": "covid-19",
+  "memory_limit": 256,
+  "time_limit": 1.0,
+  "type": "Batch",
+  "has_grader" : false,
+  "description": "Find maximum number of Deevs to imprison"
+}

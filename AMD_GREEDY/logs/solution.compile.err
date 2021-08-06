@@ -1,0 +1,4 @@
+amd.cpp: In function ‘int main()’:
+amd.cpp:59:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             if(s.size()>k){
+                ~~~~~~~~^~

@@ -1,0 +1,13 @@
+In file included from validator.cpp:1:0:
+testlib.h: In function ‘void compareTokens(int, std::__cxx11::string, std::__cxx11::string, char)’:
+testlib.h:4457:99: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘std::vector<std::__cxx11::basic_string<char> >::size_type {aka long unsigned int}’ [-Wformat=]
+         quitf(_wa, "%sexpected: %d tokens, found %d tokens", dif.c_str(), toka.size(), tokb.size());
+                                                                           ~~~~~~~~~~~             ^
+testlib.h:4457:99: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘std::vector<std::__cxx11::basic_string<char> >::size_type {aka long unsigned int}’ [-Wformat=]
+validator.cpp: In function ‘int main()’:
+validator.cpp:20:7: warning: unused variable ‘e’ [-Wunused-variable]
+   int e = inf.readInt(s,MAX,"e_i");
+       ^
+validator.cpp:14:6: warning: unused variable ‘t’ [-Wunused-variable]
+  int t = inf.readInt(1,n,"K");
+      ^
