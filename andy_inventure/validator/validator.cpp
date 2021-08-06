@@ -2,8 +2,8 @@
 #include<iostream>
 using namespace std;
 const int MAXN = 5000;
-const int MAXA = 10000000;
-const int MINA = -10000000;
+const int MAXA = 100000000;
+const int MINA = -100000000;
 int main()
 {
 	registerValidation();

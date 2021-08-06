@@ -1,39 +1,3 @@
-/*#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <map>
-using namespace std;
-
-const int MOD = 1000033;
-map<int, int> table[MOD + 1];
-
-int main() {
-    int n, t;
-    cin >> n >> t;
-    vector<int> a(n);
-    for(int &i : a)
-        cin >> i;
-    sort(a.begin(), a.end());
-    for(int i = 0; i < n; i++)
-        table[(a[i] % MOD + MOD) % MOD][a[i]]++;
-    set<pair<int, int>> ans;
-    for(int i = 0; i < n; i++) {
-        if(--table[(a[i] % MOD + MOD) % MOD][a[i]] == 0)
-            table[(a[i] % MOD + MOD) % MOD].erase(a[i]);
-        for(int j = 0; j < i; j++) {
-            if(!table[((t - a[i] - a[j]) % MOD + MOD) % MOD].empty() && table[((t - a[i] - a[j]) % MOD + MOD) % MOD].find(t - a[i] - a[j]) != table[((t - a[i] - a[j]) % MOD + MOD) % MOD].end())
-                ans.insert(make_pair(a[i], a[j]));
-        }
-    }
-    if(ans.empty())
-        cout << "FeiDooDoo_Zuo_Wei_Men\n";
-    else
-        cout << ans.size() << '\n';
-}*/
-
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -45,11 +9,8 @@ public:
         sort(nums.begin(),nums.end());
         int n = nums.size();
         int ans=0;
-
         for(int i=0;i<n;i++) {
-            //if(nums[i]>0)break;
             int L = i+1,R = n-1,target = sum-nums[i];
-           // cout<<target<<endl;
             if(i>0&&nums[i]==nums[i-1]){
                 continue;
             }
@@ -94,4 +55,41 @@ int main(){
     return 0;
 }
 
+/*#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
 
+int main() {
+    int n, t;
+    cin >> n >> t;
+    vector<long long> a(n);
+    for(long long &i : a)
+        cin >> i;
+    sort(a.begin(), a.end());
+    int ans = 0;
+    for(int i = 0; i + 1 < n; i++) {
+        if(i && a[i] == a[i - 1])
+            continue;
+        int l = i + 1, r = n - 1;
+        while(l < r) {
+            long long sum = a[i] + a[l] + a[r];
+            if(sum == t) {
+                ans++;
+                while(++l < r && a[l] == a[l - 1]);
+                while(--r > l && a[r] == a[r + 1]);
+            } else if(sum < t) {
+                l++;
+            } else {
+                r--;
+            }
+        }
+    }
+    if(ans)
+        cout << ans << '\n';
+    else
+        cout << "FeiDooDoo_Zuo_Wei_Men\n";
+}
+
+
+*/

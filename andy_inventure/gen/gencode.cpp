@@ -37,5 +37,14 @@ int main(int argc, char *argv[])
 		int t = 3;
 		print(k,t);
 	}
+	if(type == "consecutive"){
+		int k = atoi(argv[2]);
+		int start = atoi(argv[3]);
+		for(int i=0;i<k;i++){
+			h[i] = i+start; 
+		}
+		long long t = (1LL+k+(1+k)/2+start*3);
+		print(k,t);
+	}
 	return 0;
 }

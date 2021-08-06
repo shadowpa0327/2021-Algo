@@ -14,3 +14,11 @@ gencode random 5000 6
 gencode all_one 2000
 gencode all_one 3000
 gencode all_one 1000
+
+@subtask consecutive
+gencode consecutive 50 3 1
+gencode consecutive 1999 10000 2
+gencode consecutive 2999 20000 3
+gencode consecutive 3999 30000 4
+gencode consecutive 4999 1000000 5
+gencode consecutive 999 10000000 6

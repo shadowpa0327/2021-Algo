@@ -15,6 +15,11 @@
 			"index": 3,
 			"score": 50,
 			"validators": []
+		},
+		"consecutive":{
+			"index":4,
+			"score":0,
+			"validators": []
 		}
 	}
 }
